@@ -1,5 +1,5 @@
-Original todo list from
-http://documentcloud.github.com/backbone/examples/todos/index.html
+Based on [backbone.js][] and corresponding [todo list sample][]
+sample][]. from
 
 Directories M1 through M6 have samples of what we expect people to have
 by the end of the module.
@@ -15,3 +15,6 @@ by the end of the module.
 # Module 5: Breakpoints
 
 # Module 6: Something awesome
+
+[todo list sample]: http://documentcloud.github.com/backbone/examples/todos/index.html
+[backbone.js]: http://documentcloud.github.com/backbone/

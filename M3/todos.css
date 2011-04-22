@@ -329,3 +329,7 @@ background-image: -webkit-repeating-linear-gradient(transparent, transparent 50p
 #todo-list li.removing {
   -webkit-transform: scale(0.1) rotate(180deg);
 }
+
+.todo-location {
+  font-size: 12px;
+}

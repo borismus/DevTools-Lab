@@ -5,18 +5,25 @@
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
+  // If there's no builtin geolocation, fake it using this polyfill
+  yepnope({
+    test : Modernizr.geolocation,
+    nope : ['js/geolocation.js']
+  });
 
   // Todo Model
   // ----------
 
   // Our basic **Todo** model has `content`, `order`, and `done` attributes.
+  // Also add coordinates attribute
   window.Todo = Backbone.Model.extend({
 
     // If you don't provide a todo, one will be provided for you.
     EMPTY: "empty todo...",
 
-    // Ensure that each todo created has `content`.
     initialize: function() {
+      // Ensure that each todo created has `content`.
+      var todo = this;
       if (!this.get("content")) {
         this.set({"content": this.EMPTY});
       }
@@ -31,6 +38,18 @@ $(function(){
     clear: function() {
       this.destroy();
       this.view.remove();
+    },
+
+    // Set this Todo's location to be the current one
+    setCurrentLocation: function() {
+      var todo = this;
+      // Now that we use yepnope, no need for this check
+      //if (Modernizr.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        todo.set({'lat': position.coords.latitude,
+                 'lon': position.coords.longitude});
+      });
+      //}
     }
 
   });
@@ -116,6 +135,11 @@ $(function(){
     setContent: function() {
       var content = this.model.get('content');
       this.$('.todo-content').text(content);
+      if (this.model.get('lat') && this.model.get('lon')) {
+        this.$('.todo-location').text(
+          this.model.get('lat') + ',' + this.model.get('lon')
+        );
+      }
       this.input = this.$('.todo-input');
       this.input.bind('blur', this.close);
       this.input.val(content);
@@ -222,18 +246,21 @@ $(function(){
 
     // Generate the attributes for a new Todo item.
     newAttributes: function() {
-      return {
+      var attrs = {
         content: this.input.val(),
         order:   Todos.nextOrder(),
         done:    false
       };
+      return attrs;
     },
 
     // If you hit return in the main input field, create new **Todo** model,
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
       if (e.keyCode != 13) return;
-      Todos.create(this.newAttributes());
+      var todo = Todos.create(this.newAttributes());
+      // Assign the current location to this TODO
+      todo.setCurrentLocation();
       this.input.val('');
     },
 
