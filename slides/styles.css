@@ -35,7 +35,7 @@ body {
 
   position: absolute;
 
-  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate(0, 0); /* was translate3d(0, 0, 0); */
 }
 
 .slides > article {
@@ -91,23 +91,23 @@ article.biglogo {
 }
 .slides > article.far-past {
   display: block;
-  -webkit-transform: translate3d(-2040px, 0, 0);
+  -webkit-transform: translate(-2040px, 0);  /* these all were translate3d calls */
 }
 .slides > article.past {
   display: block;
-  -webkit-transform: translate3d(-1020px, 0, 0);
-}
-.slides > article.current {
-  display: block;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-.slides > article.next {
-  display: block;
-  -webkit-transform: translate3d(1020px, 0, 0);
+  -webkit-transform: translate(-1020px, 0);
+}                                        
+.slides > article.current {              
+  display: block;                        
+  -webkit-transform: translate(0, 0);    
+}                                        
+.slides > article.next {                 
+  display: block;                        
+  -webkit-transform: translate(1020px, 0);
 }
 .slides > article.far-next {
   display: block;
-  -webkit-transform: translate3d(2040px, 0, 0);
+  -webkit-transform: translate(2040px, 0);
 }
 
 /* Styles for slides */
