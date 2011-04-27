@@ -31,6 +31,7 @@ $(function(){
 
     // Toggle the `done` state of this todo item.
     toggle: function() {
+      this.countSheep();
       this.save({done: !this.get("done")});
     },
 
@@ -50,7 +51,18 @@ $(function(){
                  'lon': position.coords.longitude});
       });
       //}
+    },
+
+    countSheep: function() {
+      var start = new Date();
+      while (true) {
+        var now = new Date();
+        if (now - start > 500) {
+          return;
+        }
+      }
     }
+
 
   });
 
