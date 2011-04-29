@@ -186,9 +186,9 @@ $(function(){
       // element
       var el = $(this.el);
       el.addClass('removing');
-      setTimeout(function() {
+      el.bind('webkitTransitionEnd', function() {
         el.remove();
-      }, 1000);
+      });
     },
 
     // Remove the item, destroy the model.
