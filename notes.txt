@@ -1,0 +1,56 @@
+cake illutstartion.
+
+ask questions about who has done html. who uses CDT..
+
+introduce our lab helpers.
+raise your hand if you have questions.
+
+flow slide before what we'll cover. explain how it works.
+
+then What we'll cover. then Backbone.js
+  - backbone - show website
+ 
+"secret sauce" to something new.
+
+Slide on OMG TODO LIST.. demo of how it works.
+ - everyone open it up on their machines
+ - code arch of it?
+
+MODULE ONE
+
+little more intr on what we're gonna do now.. STYLE. no interaction yet.
+-webkit border radius to nonprefixed
+"click on the color swatch" say what your'e doing.
+HSL. color wheel? mothereffing
+hsl shift by tens! shift.
+
+
+lea verou's patterns. somehow make it easier for people to c/p it?
+
+
+MODULE TWO
+
+suggested classes to transition. We shoudl ahve these  in place. and transitionend hooks?  add, check and delete.
+
+separate slide for transforms (and i guess transitions)
+
+
+MODULE THREE
+
+polyfills list.
+show code for detection.
+
+incl modernizr in slides.
+slide on geolocation API.
+
+geolocation code skeleton is present.
+
+
+
+MODULE FOUR
+
+
+
+
+
+
