@@ -148,6 +148,7 @@ $(function(){
       var content = this.model.get('content');
       this.$('.todo-content').text(content);
       if (this.model.get('lat') && this.model.get('lon')) {
+        // Show the location
         this.$('.todo-location').text(
           this.model.get('lat') + ',' + this.model.get('lon')
         );

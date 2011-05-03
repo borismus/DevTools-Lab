@@ -1,10 +1,11 @@
 everyone running devchannel, canary or chromium
+
 increase the size of devtools for display
 get free cake cupcakes
 
 cake illutstartion.
 
-ask questions about who has done html. who uses CDT..
+ask questions about who has done html. who uses CDT.
 
 introduce our lab helpers.
 raise your hand if you have questions.
@@ -35,7 +36,8 @@ lea verou's patterns. somehow make it easier for people to c/p it?
 
 MODULE TWO
 
-suggested classes to transition. We shoudl ahve these  in place. and transitionend hooks?  add, check and delete.
+suggested classes to transition. We shoudl ahve these  in place. and
+transitionend hooks?  add, check and delete.
 
 separate slide for transforms (and i guess transitions)
 

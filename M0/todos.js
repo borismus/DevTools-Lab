@@ -22,6 +22,16 @@ $(function(){
       }
     },
 
+    countSheep: function() {
+      var start = new Date();
+      while (true) {
+        var now = new Date();
+        if (now - start > 500) {
+          return;
+        }
+      }
+    },
+
     // Toggle the `done` state of this todo item.
     toggle: function() {
       this.countSheep();
@@ -34,14 +44,9 @@ $(function(){
       this.view.remove();
     },
 
-    countSheep: function() {
-      var start = new Date();
-      while (true) {
-        var now = new Date();
-        if (now - start > 500) {
-          return;
-        }
-      }
+    // Set this Todo's location to be the current one
+    setCurrentLocation: function() {
+      // TODO(M3): Implement this
     }
 
   });
@@ -117,7 +122,9 @@ $(function(){
 
     // Re-render the contents of the todo item.
     render: function() {
-      $(this.el).html(this.template(this.model.toJSON()));
+      var el = $(this.el);
+      var model = this.model;
+      el.html(this.template(this.model.toJSON()));
       this.setContent();
       return this;
     },
@@ -135,6 +142,9 @@ $(function(){
     // Toggle the `"done"` state of the model.
     toggleDone: function() {
       this.model.toggle();
+      // Since the view will get regenerated every time we change the
+      // DOM, set a class on the li element
+      $(this.el).toggleClass('complete', this.model.done);
     },
 
     // Switch this view into `"editing"` mode, displaying the input field.
@@ -156,13 +166,19 @@ $(function(){
 
     // Remove this view from the DOM.
     remove: function() {
-      $(this.el).remove();
+      var el = $(this.el);
+      // Remove the element once the transition is complete
+      el.bind('webkitTransitionEnd', function() {
+        el.remove();
+      });
+      // Add a "removing" class 
+      el.addClass('removing');
     },
 
     // Remove the item, destroy the model.
     clear: function() {
       this.model.clear();
-    }
+    },
 
   });
 
@@ -229,7 +245,8 @@ $(function(){
       return {
         content: this.input.val(),
         order:   Todos.nextOrder(),
-        done:    false
+        done:    false,
+        old:     false
       };
     },
 
@@ -237,7 +254,8 @@ $(function(){
     // persisting it to *localStorage*.
     createOnEnter: function(e) {
       if (e.keyCode != 13) return;
-      Todos.create(this.newAttributes());
+      var todo = Todos.create(this.newAttributes());
+      todo.setCurrentLocation();
       this.input.val('');
     },
 

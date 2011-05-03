@@ -28,14 +28,14 @@ a img {
 }
 
 html {
-background-color: hsl(100, 57%, 40%);
+background-color: hsl(100, 44%, 50%);
 background-image: -webkit-repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
   -webkit-repeating-linear-gradient(180deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
   -webkit-repeating-linear-gradient(-35deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
   
 }
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Georgia", serif;
     font-size: 14px;
     line-height: 1.4em;
     color: #eeeeee;
@@ -54,6 +54,7 @@ background-image: -webkit-repeating-linear-gradient(transparent, transparent 50p
   border: 1px solid #ddd;
 }
   #todoapp h1 {
+    font-family: 'Aclonica';
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -314,16 +315,10 @@ background-image: -webkit-repeating-linear-gradient(transparent, transparent 50p
   -webkit-transform:rotate(180deg);
 }
 
-/*
- * Adding some wicked cool animations
- */
+/* TODO(M2): Make wicked animations */
 
 #todo-list li {
   -webkit-transition: all 1s linear;
-}
-
-#todo-list li.complete {
-  -webkit-transform: translate(30px, 0);
 }
 
 #todo-list li.removing {

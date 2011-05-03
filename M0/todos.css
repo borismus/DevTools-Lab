@@ -149,6 +149,10 @@ html {
     height: 20px;
     background: url(img/destroy.png) no-repeat 0 0;
   }
+
+  #todo-list li {
+    -webkit-transition: all 1s ease-in-out;
+  }
     #todo-list li:hover .todo-destroy {
       display: block;
     }
@@ -308,4 +312,14 @@ html {
   -moz-transform:rotate(180deg);
   -khtml-transform:rotate(180deg);
   -webkit-transform:rotate(180deg);
+}
+
+/* TODO(M2): Make wicked animations */
+
+#todo-list li {
+  -webkit-transition: all 0.001s linear;
+}
+
+#todo-list li.removing {
+  -webkit-transform: scale(1);
 }

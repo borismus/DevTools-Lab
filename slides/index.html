@@ -14,8 +14,7 @@
     <title>Google I/O</title>
 
     <meta charset='utf-8' />
-    <script
-      src='http://io-2011-slides.googlecode.com/svn/trunk/slides.js'></script>
+    <script src="slides.js"></script>
   </head>
   
   <style>
@@ -28,12 +27,7 @@
   <body style='display: none'>
 
     <section class='slides'>
-      
-      <!-- Your slides (<article>s) go here. Delete or comment out the
-           slides below. -->
-        
-        
-      
+
       <article class='biglogo'>
       </article>
 
@@ -49,97 +43,143 @@
           May 9, 2011
         </p>
       </article>
-      
+
+      <article>
+        <h3>Format</h3>
+        <ul>
+          <li>Introduce HTML5 feature, demo it, let you build</li>
+          <li>Interactive lab - ask questions</li>
+          <li>We have helpers</li>
+          <li>There is a cheatsheet!</li>
+        </ul>
+      </article>
+
       <article>
         <h3>What we'll cover</h3>
         <ul>
-          <li>CSS Developer Features</li>
-          <li>CSS Transitions and Transformations</li>
-          <li>Feature detection and Polyfills</li>
-          <li>Profiling!</li>
-          <li>Breakpoints!</li>
-          <li>Awesome secret sauce...</li>
+          <li>Styling</li>
+          <li>Transitions and transforms</li>
+          <li>Feature detection</li>
+          <li>Profiling</li>
+          <li>Breakpoints</li>
+          <li>A surprise!</li>
         </ul>
       </article>
 
       <article>
-        <h3>Introducing Backbone.js</h3>
+        <h3>The Todo List <a
+            href="http://goo.gl/c6kgn">goo.gl/c6kgn</a></h3>
         <ul>
-          <li>JS MVC Framework</li>
-          <li>Lightweight: 4kb minified</li>
+          <li>Six modules but don't panic</li>
+          <li>Uses Backbone.js lightweight JS MVC Framework</li>
           <li>Builds on jQuery and Underscore.js</li>
-          <li>Will use a TODO list sample</li>
+          <li>Code walkthrough</li>
+          <li>Thanks, Jérôme Gravel-Niquet</li>
         </ul>
       </article>
 
       <article>
-        <h3>Flow</h3>
+        <h1>PART 1: Styling</h1>
         <ul>
-          <li>Talk a bit</li>
-          <li>Code a bit</li>
-          <li>Rinse, repeat</li>
-          <li>Ultimately: best TODO app evar!</li>
-          <li>Note: yay cheatsheet</li>
-        </ul>
-      </article>
-
-      <article>
-        <h1>PART 1: CSS DevTools Features</h1>
-        <ul>
+          <li>Features of CSS3</li>
           <li>Interactive overview of inspector CSS3 features</li>
-          <li>Cool stuff in CSS3</li>
         </ul>
       </article>
 
       <article>
         <h3>CSS Features</h3>
         <ul>
-          <li>Rounded corners, Box shadows, Gradients</li>
-          <li>Inline editing</li>
-          <li>Creating new styles</li>
-          <li>Editing the stylesheet directly</li>
-          <li>Stylesheet versioning</li>
+          <li>Rounded corners</li>
+          <li>Text and Box Shadows</li>
+          <li>Gradients (<a
+            href="http://leaverou.me/css3patterns/">leaverou.me/css3patterns</a>)</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>CSS Dev Tools</h3>
+        <ul>
+          <li>Edit inline</li>
+          <li>Add new styles</li>
+          <li>Edit the stylesheet directly</li>
+          <li>+ versioning</li>
+          <li>Color features (also see: <a
+            href="http://mothereffinghsl.com/">mothereffinghsl.com</a>)</li>
         </ul>
       </article>
 
       <article>
         <h3>Build it!</h3>
         <p>
-        Use advanced CSS and the devtools to make your TODO list app look
+        Use your favorite CSS and the devtools to make your TODO list app look
         awesome
         </p>
       </article>
 
       <article>
-        <h1>PART 2: CSS3 Transitions and Transformations</h1>
+        <h1>PART 2: Transitions and transforms</h1>
         <ul>
-          <li>Explain the ideas</li>
-          <li>Show cool demos</li>
+          <li>demos</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Transitions</h3>
+        <ul>
+          <li>Easy way to implement gradual state changes</li>
+          <li>Timing functions</li>
+          <li><code>-webkit-transition: all 0.5s ease-in;</code></li>
+          <li><code>webkitTransitionEnd</code> event</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Transforms</h3>
+        <ul>
+          <li>Hardware acceleration!</li>
+          <li>translate, rotate, scale</li>
+          <li>3D: rotate3d, scale3d, perspective</li>
+          <li>Demos at <a
+            href="http://css3please.com/">css3please.com</a></li>
         </ul>
       </article>
 
       <article>
         <h3>Build it!</h3>
         <p>
-        Retrofit the TODO app with amazing effects whenever the user marks
-        a TODO as completed, adds or deletes it.
+        Retrofit the TODO app with amazing effects whenever the user
+        deletes a TODO.
         </p>
       </article>
 
       <article>
-        <h1>PART 3: Feature Detection and Polyfills Interlude</h1>
+        <h1>PART 3: Feature detection</h1>
         <ul>
-          <li>Benefits of feature detection vs. other stuff</li>
-          <li>Introduce Modernizr</li>
+          <li>Feature detect!</li>
+          <li>Polyfills</li>
         </ul>
       </article>
 
       <article>
-        <h3>Shims and Polyfills</h3>
+        <h3>Example: Geolocation</h3>
         <ul>
-          <li>Explain the difference</li>
-          <li>Show some examples of polyfills</li>
-          <li>Introduce yepnope</li>
+          <li>Make location-aware HTML5 apps</li>
+          <li>API: <code>navigator.geolocation.getCurrentPosition</code></li>
+          <li>Callback: position.coords lat/lon</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Mozernizr and Polyfills</h3>
+        <ul>
+          <li>Compatibility tables: <a
+            href="http://caniuse.com/">caniuse.com</a></li>
+          <li><a href="http://www.modernizr.com/">Modernizr</a> does feature detection</li>
+          <li>Polyfill: browser functionality patches</li>
+          <li>Examples of polyfills: 
+          <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">long list</a></li>
+          <li>Conditional polyfill loading: <a
+            href="http://yepnopejs.com/">yepnope</a></li>
         </ul>
       </article>
 
