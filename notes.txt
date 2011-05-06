@@ -131,3 +131,5 @@ want to make text larger and have it persist.
 
 rename PART 2 to MODULE 2 ??
 
+html, body { min-height: 100%; } & clear html bg.
+
