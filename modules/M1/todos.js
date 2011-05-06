@@ -46,14 +46,7 @@ $(function(){
 
     // Set this Todo's location to be the current one
     setCurrentLocation: function() {
-      var todo = this;
-      // Check that we're using a supported API
-      if (Modernizr.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          todo.set({'lat': position.coords.latitude,
-                   'lon': position.coords.longitude});
-        });
-      }
+      // TODO(M3): Implement this
     }
 
   });
