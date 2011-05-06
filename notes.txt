@@ -84,3 +84,50 @@ what you learned slide.
 interested in more features? plug paul and lead eng. talk
 thanks for coming!
 free cake!
+
+
+
+
+
+
+
+RUNTHROGUH TWO
+
+BEFORE START
+
+remove all existing todos.
+
+
+module ONE
+
+kill off Jerome credit in the demo.
+dont need to walkthrough fontsize++ so much because they dont need to follow along
+
+module THREE
+
+setContent should.. just work.
+move polyfills to BUILD IT
+INSTEAD OF MODERNIZR? how dare you?
+
+
+module FOUR
+
+countSheep: could ask audience what they think it does.
+repeating profiles (or anything else): talk through it again. people are slow
+
+module FIVE
+
+include code snippet for counting number of items remaining
+
+module SIX
+
+Todos.remaining().length
+
+
+OVERALL: 
+
+show the results of each module!!!!!
+want to make text larger and have it persist.
+
+rename PART 2 to MODULE 2 ??
+
