@@ -120,7 +120,7 @@
       <article>
         <h3>Build it!</h3>
         <p>
-        Use your favorite CSS and the devtools to make your TODO list app look
+        Use your favorite CSS and the devtools to make your todo list app look
         awesome
         </p>
         <ul>
@@ -161,8 +161,8 @@
       <article>
         <h3>Build it!</h3>
         <p>
-        Retrofit the TODO app with amazing effects whenever the user
-        deletes a TODO.
+        Retrofit the todo app with amazing effects whenever the user
+        deletes a todo item.
         <ul>
           <li>CSS3 Please: <a href="http://css3please.com/">css3please.com</a></li>
           <li>Transforms: <a href="http://www.westciv.com/tools/transforms/index.html">sandbox</a></li>
@@ -188,29 +188,31 @@
       </article>
 
       <article>
-        <h3>Mozernizr and Polyfills</h3>
+        <h3>Modernizr and Polyfills</h3>
         <ul>
           <li>Compatibility tables: <a
             href="http://caniuse.com/">caniuse.com</a></li>
           <li><a href="http://www.modernizr.com/">Modernizr</a> does feature detection</li>
-          <li>Polyfill: browser functionality patches</li>
-          <li>Examples of polyfills: 
-          <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">long list</a></li>
-          <li>Conditional polyfill loading: <a
-            href="http://yepnopejs.com/">yepnope</a></li>
+
         </ul>
       </article>
 
       <article>
         <h3>Build it!</h3>
         <p>
-        Make your TODO app location aware. Be sure to feature detect to ensure that
-        the browser supports geolocation. For bonus points, use yepnope to
-        load the polyfill if there's no geolocation support.
+        Make your todo app location aware. Be sure to feature detect to ensure that
+        the browser supports geolocation. 
         </p>
         <ul>
           <li>Feature detection: <a href="http://www.modernizr.com/">Modernizr</a></li>
           <li>Conditional loading: <a href="http://yepnopejs.com/">Yepnope</a></li>
+        </ul>
+        
+        <p>For bonus points, use yepnope to load a polyfill if there's no geolocation support.
+        <ul>
+          <li>Examples of polyfills: 
+          <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">long list</a></li>
+          <li>Conditional polyfill loading: <a href="http://yepnopejs.com/">yepnope</a></li>
         </ul>
       </article>
 
@@ -231,7 +233,7 @@
       <article>
         <h3>Fix it!</h3>
         <p>
-        Why does clearing TODOs take so long? Find the problem using the
+        Why does clearing todo items take so long? Find the problem using the
         debugger and fix it.
 
         <!-- TODO(smus): find a less contrived example. -->
@@ -263,23 +265,29 @@
         <h3>Build it!</h3>
         <p>
         Try out all of the breakpoints. Break in some critical cases such as
-        when you have no more TODOs left in the list. Do something cool in that 
-        case.
+        when you have no more todo items left in the list. </p>
+        
+        <p>Write a conditional statement to add functionality when all the todo items have been checked off.
         </p>
+        <pre>
+          // check remaining items in toggle method
+          Todos.remaining().length // active todo items remaining
+          // if it is zero, do something interesting
+        </pre>
       </article>
 
 
       <article>
         <h1>PART 6: Finale</h1>
         <ul>
-          <li>Add double rainbow</li>
+          <li>Add a touch more fun</li>
         </ul>
       </article>
 
       <article>
-        <h3>Bulid it!</h3>
+        <h3>Build it!</h3>
         <p>
-        Add double rainbows, unicorns, explosions and panda bears.
+        Grab source from powpow.html
         </p>
       </article>
 
@@ -297,9 +305,9 @@
         <h1>Thanks + Free cake!</h1>
         <ul>
         <p>
-          Paul Irish @paul_irish
+          Paul Irish: @paul_irish
           <br>
-          Boris Smus @borismus
+          Boris Smus: @borismus
         </p>
         </ul>
       </article>
