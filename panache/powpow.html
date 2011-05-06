@@ -4,7 +4,8 @@
 
 
 <style>
-canvas { position: absolute; top: 0; left: 0; z-index: -1;;}
+canvas { position: absolute; top: 0; left: 0; z-index: -1;}
+body, html { min-height: 100%; } html { background:none;}
 </style>
 
 
@@ -75,10 +76,13 @@ function init() {
 
 function loop() {
 
-  if (text != input.value) {
-    writeText(input.value);
+  if (text != input.value || window.yaynabled) {
+    text = input.value || window.yaytext;
+    if (text === undefined) return;
+    writeText(text);
     processText();
   }
+
 
 
   // make some particles
@@ -132,8 +136,6 @@ function makeParticle(particleCount, x, y) {
 
 
 function writeText(string) {
-
-  text = string;
 
   contextText.clearRect(0, 0, WIDTH, 128);
   contextText.fillText(string, 5, 90); // magic numbers to position the text
@@ -242,7 +244,13 @@ function randomRange(min, max) {
 }
 
 function yay(){
-  
+  window.yaynabled = true;
+  window.yaytext = 'WINNER!';
+  var elem = document.querySelector('#todoapp');
+  if (elem){
+    elem.style.WebkitTransition = elem.style.OTransition = elem.style.MozTransition = elem.style.msTransition = '1s ease-out';
+    elem.style.WebkitTransform = elem.style.OTransform = elem.style.MozTransform = elem.style.msTransform = 'rotateZ(360deg)';
+  }
 }
 
 </script>

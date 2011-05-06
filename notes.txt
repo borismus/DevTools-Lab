@@ -131,3 +131,4 @@ want to make text larger and have it persist.
 
 rename PART 2 to MODULE 2 ??
 
+probably improve perf of fireworks.
