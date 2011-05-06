@@ -46,7 +46,14 @@ $(function(){
 
     // Set this Todo's location to be the current one
     setCurrentLocation: function() {
-      // TODO(M3): Implement this
+      var todo = this;
+      // Check that we're using a supported API
+      if (Modernizr.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          todo.set({'lat': position.coords.latitude,
+                   'lon': position.coords.longitude});
+        });
+      }
     }
 
   });
@@ -137,6 +144,13 @@ $(function(){
       this.input = this.$('.todo-input');
       this.input.bind('blur', this.close);
       this.input.val(content);
+      
+      // Render location
+      if (this.model.get('lat') && this.model.get('lon')) {
+        this.$('.todo-location').text(
+          this.model.get('lat') + ',' + this.model.get('lon')
+        );
+      }
     },
 
     // Toggle the `"done"` state of the model.

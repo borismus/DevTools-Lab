@@ -100,14 +100,12 @@ remove all existing todos.
 
 module ONE
 
-kill off Jerome credit in the demo.
 dont need to walkthrough fontsize++ so much because they dont need to follow along
 
 module THREE
 
 setContent should.. just work.
 move polyfills to BUILD IT
-INSTEAD OF MODERNIZR? how dare you?
 
 
 module FOUR

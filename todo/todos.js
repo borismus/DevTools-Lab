@@ -137,6 +137,13 @@ $(function(){
       this.input = this.$('.todo-input');
       this.input.bind('blur', this.close);
       this.input.val(content);
+      
+      // Render location
+      if (this.model.get('lat') && this.model.get('lon')) {
+        this.$('.todo-location').text(
+          this.model.get('lat') + ',' + this.model.get('lon')
+        );
+      }
     },
 
     // Toggle the `"done"` state of the model.
