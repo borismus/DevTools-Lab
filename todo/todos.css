@@ -28,9 +28,9 @@ a img {
   border: none;
 }
 
-html {
-  background: #eeeeee;
-}
+body, html { min-height: 100%; } 
+
+
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
