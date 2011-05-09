@@ -47,6 +47,7 @@ $(function(){
     // Set this Todo's location to be the current one
     setCurrentLocation: function() {
       // TODO(M3): Implement this
+      // Use this.set('lat', latitudeValue)
     }
 
   });
