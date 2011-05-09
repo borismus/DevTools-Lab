@@ -431,3 +431,72 @@ li.L3,
 li.L5,
 li.L7,
 li.L9 { background: #eee }
+
+
+
+
+.transformpre { margin: 28px 0;}
+
+.transformTable {
+  width: 100%;
+  margin-top: -23px;
+}
+.transformTable th {
+  font-size: 18px;
+  padding: 0;
+  padding-top: 10px;
+}
+.transformTable td {
+  text-align: center;
+  padding: 0;
+}
+
+.transformTable th, 
+.transformTable td { border: 0; text-align: center;} 
+
+
+.rotate1 {
+  -webkit-transform: rotate(-45deg);
+}
+.rotate2 {
+  -webkit-transform: rotate(-15deg);
+}
+.rotate3 {
+  -webkit-transform: rotate(15deg);
+}
+.rotate4 {
+  -webkit-transform: rotate(45deg);
+}
+.rotate5 {
+  -webkit-transform: rotate(75deg);
+}
+.scale1 {
+  -webkit-transform: scale(0.2);
+}
+.scale2 {
+  -webkit-transform: scale(0.5);
+}
+.scale3 {
+  -webkit-transform: scaleX(0.5);
+}
+.scale4 {
+  -webkit-transform: scaleX(2.0);
+}
+.scale5 {
+  -webkit-transform: scaleY(1.5);
+}
+.skew1 {
+  -webkit-transform: skewX(10deg);
+}
+.skew2 {
+  -webkit-transform: skewX(20deg);
+}
+.skew3 {
+  -webkit-transform: skewX(30deg);
+}
+.skew4 {
+  -webkit-transform: skewX(40deg);
+}
+.skew5 {
+  -webkit-transform: skewX(50deg);
+}

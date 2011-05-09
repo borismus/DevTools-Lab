@@ -9,7 +9,7 @@
   URL: http://code.google.com/p/io-2011-slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://io-2011-slides.googlecode.com/svn/trunk/';
+var PERMANENT_URL_PREFIX = './';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
