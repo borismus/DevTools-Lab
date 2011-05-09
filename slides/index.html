@@ -264,8 +264,12 @@
         <h3>Example: Geolocation</h3>
         <ul>
           <li>Make location-aware HTML5 apps</li>
-          <li>API: <code>navigator.geolocation.getCurrentPosition</code></li>
-          <li>Callback: position.coords lat/lon</li>
+          <pre>
+navigator.geolocation.getCurrentPosition(function (position) {
+  // position.coords.latitude
+  // position.coords.longitude
+})
+          </pre>
         </ul>
       </article>
 
