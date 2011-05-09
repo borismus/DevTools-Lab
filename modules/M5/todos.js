@@ -34,8 +34,13 @@ $(function(){
 
     // Toggle the `done` state of this todo item.
     toggle: function() {
-      this.countSheep();
+      //this.countSheep();
       this.save({done: !this.get("done")});
+      
+      if (Todos.remaining().length == 0){
+        window.console && console.log('woohoo! you finished all your items! highfive! _o/\o_');
+      }
+      
     },
 
     // Remove this Todo from *localStorage* and delete its view.
